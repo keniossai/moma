@@ -75,5 +75,10 @@ class UserSeeder extends Seeder
             'state_id' => 15,
             'name' => $massuer->name. ' Massage Parlour'
         ]);
+
+        User::each(function ($user) {
+            $user->unique_id = $user->freshId();
+            $user->save();
+        });
     }
 }
