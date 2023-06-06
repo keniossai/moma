@@ -24,7 +24,7 @@ class UpdateUserRequest extends FormRequest
      */
     public function rules()
     {
-        $unique = Rule::unique('users')->where('id', user('id'))->ignore($this->user);
+        $unique = Rule::unique('users')->ignoreModel($this->user);
 
         return [
             'email'            => ['email', $unique],

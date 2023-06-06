@@ -33,13 +33,12 @@ trait InteractsWithUserAttributes
         return Attribute::get(fn () => __("user.gender.$this->gender"));
     }
 
-    public function photo(): Attribute
+    public function avatar(): Attribute
     {
         return Attribute::make(
             get: function ($value) {
-                $value ??= config("cloudinary.folders.photos")."/defaults/{$this->gender_str}";
-
-                return cloudinary_url($value, config('cloudinary.transformations.photos'));
+                return $value ? cloudinary_url($value, config('cloudinary.transformations.photos')):
+                    asset('admin/images/avatar.png');
             },
             set: fn ($value) => $this->setMediaAttribute($value, 'cloudinary.folders.photos')
         )->withoutObjectCaching();

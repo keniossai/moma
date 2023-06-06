@@ -13,7 +13,7 @@ class UserController extends Controller
     public function __construct()
     {
         $this->authorizeResource(User::class);
-        $this->middleware('throttle:update-user')->only('update');
+//        $this->middleware('throttle:update-user')->only('update');
     }
 
     /**
@@ -44,7 +44,8 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        $request->user->update($request->all());
+        $user->update($request->all());
+
         return Response::api(['message' => 'Updated successfully']);
     }
 

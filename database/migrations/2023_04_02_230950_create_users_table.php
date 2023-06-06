@@ -30,7 +30,7 @@ return new class extends Migration
             $table->enum('type',[User::ADMIN, User::MASSEUR, User::CLIENT])->default(User::CLIENT);
             $table->enum('location',[User::ABUJA, User::LAGOS, User::PH]);
             $table->boolean('active_status')->default(0);
-            $table->string('avatar')->default(config('chatify.user_avatar.default'));
+            $table->string('avatar')->nullable();
             $table->foreignId('state_id')->nullable()->constrained();
             $table->integer('login_count')->default(0);
             $table->timestamp('last_login')->nullable();
