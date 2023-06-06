@@ -60,10 +60,10 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="/">Home</a></li>
 					<li class="nav-item">
-						<a class="nav-link" href="about">About Us</a>
+						<a class="nav-link" href="{{ route('landing.about') }}">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="services">Services</a>
+						<a class="nav-link" href="{{ route('landing.service') }}">Services</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#" data-toggle="modal" data-target="#search">Find Therapist</a>
@@ -75,13 +75,13 @@
 						<a class="nav-link" href="blog.html">Blog</a>
 					</li> -->
 					<li class="nav-item">
-						<a class="nav-link" href="contact">Contact Us</a>
+						<a class="nav-link" href="{{ route('landing.contact') }}">Contact Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="login">Login</a>
+						<a class="nav-link" href="{{ route('login') }}">Login</a>
 					</li>
 					<li class="nav-item btn-appointment">
-						<a class="nav-link" href="#">Join Moma</a>
+						<a class="nav-link" href="{{ route('register') }}">Join Moma</a>
 					</li>
 					<!-- <li class="nav-item btn-appointment">
 						<a class="nav-link" href="#" data-toggle="modal" data-target="#appointment">Appointment</a>

@@ -112,6 +112,10 @@
                 </ul>
             </li>
 
+            <form action="{{ route('logout') }}" id="logout-form-nav" method="post">
+                @csrf
+            </form>
+
             <!-- User Account-->
             <li class="dropdown user user-menu">
                 <a href="#" class="waves-effect waves-light dropdown-toggle" data-bs-toggle="dropdown" title="User">
@@ -123,7 +127,10 @@
                         <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i> My Wallet</a>
                         <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Settings</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="ti-lock text-muted me-2"></i> Logout</a>
+                        <a class="dropdown-item" href="#"
+                           onclick="event.preventDefault();
+                        document.getElementById('logout-form-nav').submit();"
+                        ><i class="ti-lock text-muted me-2"></i> Logout</a>
                     </li>
                 </ul>
             </li>

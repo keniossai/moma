@@ -18,12 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(FrontendController::class)->group(function () {
+Route::controller(FrontendController::class)->name('landing.')->group(function () {
     Route::get('/', 'home');
-    Route::get('/about', 'about');
-    Route::get('/services', 'service');
-    Route::get('/contact', 'contact');
-    Route::get('/my_profile', 'profile');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/services', 'service')->name('service');
+    Route::get('/contact', 'contact')->name('contact');
+    Route::get('/my_profile', 'profile')->name('profile');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
