@@ -29,7 +29,9 @@
 	<!-- Google font-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,500;1,100&family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,400&family=Open+Sans:wght@300;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 	<!-- Main CSS -->
 	<link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1fe647256e.js" crossorigin="anonymous"></script>
