@@ -81,7 +81,7 @@
 						<a class="nav-link" href="login">Login</a>
 					</li>
 					<li class="nav-item btn-appointment">
-						<a class="nav-link" href="#">Join Moma</a>
+						<a class="nav-link" href="{{ route('register') }}">Join Moma</a>
 					</li>
 					<!-- <li class="nav-item btn-appointment">
 						<a class="nav-link" href="#" data-toggle="modal" data-target="#appointment">Appointment</a>
