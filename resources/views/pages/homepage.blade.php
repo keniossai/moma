@@ -45,8 +45,8 @@
 						<div class="row">
 							<div class="col-md-7">
 								<div class="hero-text">
-									<h1 class="animated fadeInRight">Nuru Massage</h1>
-									<p class="animated fadeInRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
+									<h1 class="animated fadeInRight">Prevention Equals Longevity</h1>
+									<p class="animated fadeInRight">Start living better today</p>
 									<a href="contact-us.html" class=" btn btn-primary animated fadeInRight">Contact Us</a>
 								</div>
 							</div>
