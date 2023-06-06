@@ -70,6 +70,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'unique_id';
+    }
+
     public function masseur() : HasOne
     {
         return  $this->hasOne(Masseur::class);
@@ -86,5 +91,21 @@ class User extends Authenticatable
     public function token(): Attribute
     {
         return Attribute::get(fn () => $this->createToken(request()->device_name ?? 'Personal')->plainTextToken);
+    }
+
+    public function freshId(): string
+    {
+        start:
+        $prefix = match ($this->type) {
+            self::CLIENT => 'CL',
+            self::ADMIN => 'AD',
+            self::MASSEUR => 'MA'
+        };
+
+        $id = str(\Str::random(8))->prepend($prefix)->lower();
+
+        if (self::whereUniqueId($id)->exists()) goto start;
+
+        return  $id;
     }
 }

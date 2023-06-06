@@ -8,7 +8,7 @@
                     <a href="/" class="fxt-logo"><img src="{{ asset('admin/images/logo.png') }}" alt="Logo"></a>
                 </div>
                 <div class="fxt-form">
-                    <p class="text-center">Login into your account</p>
+                    <p class="text-center">Create Your Account</p>
                     <form action="{{ route('api.register') }}" method="post" class="x-submit" data-then="reload">
                         <div class="row">
                             <div class="col-md-6">
@@ -36,8 +36,17 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <select type="text" id="email" class="form-control" name="location" placeholder="Phone number" required="required">
-                                            <option value="Select Location">Select</option>
+                                        <select type="text" id="email" class="form-control" name="type" required="required">
+                                            <option value="" disabled selected>Select your account type</option>
+                                            <option value="{{ \App\Models\User::CLIENT }}">Customer</option>
+                                            <option value="{{ \App\Models\User::MASSEUR }}">Therapist</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                        <select type="text" id="email" class="form-control" name="location" required="required">
+                                            <option value="" disabled selected>Select location</option>
                                             <option value="Abuja">Abuja</option>
                                             <option value="Lagos">Lagos</option>
                                             <option value="Port Harcourt">Port Harcourt</option>
@@ -56,17 +65,18 @@
                                         <i toggle="#password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col">
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-3">
                                         <div class="fxt-checkbox-area">
                                             <div class="checkbox">
-                                                <input id="checkbox1" type="checkbox">
+                                                <input id="checkbox1" type="checkbox" name="remember">
                                                 <label for="checkbox1">Keep me logged in</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="form-group">

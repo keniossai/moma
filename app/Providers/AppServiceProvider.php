@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Form;
 use App\Models\State;
 use App\Models\User;
+use App\Observers\UserObserver;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Response;
 use Illuminate\Support\Carbon;
@@ -31,6 +32,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerMacros();
+        $this->bootObservers();
 
     }
 
@@ -108,5 +110,10 @@ class AppServiceProvider extends ServiceProvider
                 fn () => State::all()
             )
         );
+    }
+
+    public function bootObservers()
+    {
+        User::observe(UserObserver::class);
     }
 }
