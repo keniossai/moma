@@ -66,7 +66,7 @@ ol{
 	list-style-type:none;
 }
 body{
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Brygada 1918', serif;
 	background:#000;
 	font-size:16px;
 	position:relative;
@@ -78,14 +78,14 @@ h4,
 h5,
 h6{
 	color:#fff;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Brygada 1918', serif;
 }
 
 h1 {
-    font-weight: 600;
-	font-size:36px;
-	line-height:46px;
- 	margin: 0 0 14px;
+  font-weight: 600;
+	font-size:76px;
+ 	/* margin: 0 0 14px; */
+    width: 800px;
 }
 h2{
 	font-weight:700;
@@ -123,6 +123,12 @@ p {
     line-height: 20px;
     color: #929292;
     margin: 0 0 25px;
+}
+
+.banner-caption p{
+	color:  white;
+	font-weight: 200;
+    font-size: 20px;
 }
 
 /*================================ Pre Loader ====================================*/
@@ -314,10 +320,10 @@ section{
 }
 .navbar .navbar-nav .nav-link{
 	padding: 13px 10px;
-    font-size: 13px;
+    font-size: 15px;
     color: #777777;
     /* line-height: 24px; */
-    font-weight: 300;
+    font-weight: smooth;
 	text-transform:capitalize;
 	position:relative;
 }
@@ -462,7 +468,7 @@ section{
 	animation-delay:0.4s;
 }
 .banner-caption h1{
-	text-transform:uppercase;
+	text-transform:capitalize;
 	animation-delay:0.8s;
 }
 .banner-caption p{
@@ -475,7 +481,6 @@ section{
     width: 100%;
     float: right;
     height: auto;
-    /* max-width: 540px; */
 }
 .carousel-indicators{
 	width:14px;

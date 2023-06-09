@@ -11,8 +11,8 @@
 						<div class="row">
 							<div class="col-md-7">
 								<div class="hero-text">
-									<h1 class="animated fadeInUp">Unlock Your Potential with Therapeutic Care</h1>
-									<p class="animated fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
+									<h1 class="animated fadeInUp">Convenient and affordable therapy with Moma</h1>
+									<p class="animated fadeInUp">Reduce muscle tension and stress, lowers blood pressure, and discomfort.</p>
 									<div class="">
 										<a href="contact-us.html" class=" btn btn-primary animated fadeInUp">Contact Us</a>
 									</div>
@@ -29,8 +29,8 @@
 						<div class="row">
 							<div class="col-md-7">
 								<div class="hero-text">
-									<h1 class="animated fadeInLeft">Soft & Pure Spa Session</h1>
-									<p class="animated fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
+									<h1 class="animated fadeInLeft">Rejuvenated Body & Soul</h1>
+									<p class="animated fadeInLeft">Certified Relaxation Therapist to help you</p>
 									<a href="contact-us.html" class=" btn btn-primary animated fadeInLeft">Contact Us</a>
 								</div>
 							</div>
@@ -45,8 +45,8 @@
 						<div class="row">
 							<div class="col-md-7">
 								<div class="hero-text">
-									<h1 class="animated fadeInRight">Nuru Massage</h1>
-									<p class="animated fadeInRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
+									<h1 class="animated fadeInRight">Prevention Equals Longevity</h1>
+									<p class="animated fadeInRight">Start living better today</p>
 									<a href="contact-us.html" class=" btn btn-primary animated fadeInRight">Contact Us</a>
 								</div>
 							</div>
