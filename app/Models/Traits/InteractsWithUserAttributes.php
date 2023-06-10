@@ -38,7 +38,7 @@ trait InteractsWithUserAttributes
         return Attribute::make(
             get: function ($value) {
                 return $value ? cloudinary_url($value, config('cloudinary.transformations.photos')):
-                    asset('admin/images/avatar.png');
+                    asset("assets/img/avatar/$this->gender_str.jpeg");
             },
             set: fn ($value) => $this->setMediaAttribute($value, 'cloudinary.folders.photos')
         )->withoutObjectCaching();
