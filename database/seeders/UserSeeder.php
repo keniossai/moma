@@ -15,11 +15,11 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'email' => 'ugwukelvintochukwu@gmail.com',
+            'email' => 'admin@gmail.com',
             'password' => 'password',
             'phone' => '2348036037038',
-            'first_name' => 'Tochukwu',
-            'last_name' => 'Ugwu',
+            'first_name' => 'Sam',
+            'last_name' => 'Adumi',
             'gender' => User::MALE,
             'type' => User::ADMIN,
             'state_id' => 15,
