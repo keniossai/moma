@@ -33,6 +33,11 @@ class Booking extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function massage(): BelongsTo
+    {
+        return $this->belongsTo(Massage::class);
+    }
+
     public function scopeForTherapist(Builder $builder, User $user)
     {
         $builder->whereBelongsTo($user, 'therapist');

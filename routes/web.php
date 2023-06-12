@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GalleryController;
@@ -45,7 +46,10 @@ Route::middleware('auth')->group(function () {
 //        return view('gallery.index');
 //    })->name('gallery');
 
-    Route::resource('users',  UserController::class)->only(['index', 'show']);
+    Route::resource('users',            UserController::class)->only(['index', 'show']);
+    Route::resource('bookings',         BookingController::class)->only('index');
+
+
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });

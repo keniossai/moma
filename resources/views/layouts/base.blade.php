@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li class="treeview">
-                        <a href="{{ route('users.index') }}">
+                        <a href="{{ route('bookings.index') }}">
                             <span>BOOKINGS</span>
                         </a>
                     </li>
