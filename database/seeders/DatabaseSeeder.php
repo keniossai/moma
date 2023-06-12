@@ -17,9 +17,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->state();
         $this->lgas();
-        $this->call(UserSeeder::class);
-
-
+        $this->call([
+            UserSeeder::class,
+            MassageSeeder::class
+        ]);
     }
 
 
