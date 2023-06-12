@@ -19,7 +19,7 @@
                                 <div class="col-md-8 col-sm-6">
                                     <div class="d-md-flex justify-content-between align-items-start">
                                         <h2 class="box-title mt-0 ">
-                                            <div>{{ $user->name }}</div>
+                                            <div>{{ $user->name }} <img width="20" src="{{ asset('admin/images/quality.png') }}" alt=""></div>
                                             <div class="fs-5 mt-3">
                                                 <span class="fw-light">Unique ID - </span>
                                                 <span>{{ $user->unique_id }}</span>
@@ -136,7 +136,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label class="form-label">Numbe of Completed</label>
+                                <label class="form-label">Number of Completed</label>
                                 <div class="col-md-12 mb-2">
                                     <a class="btn btn-outline btn-success d-flex justify-content-between" href="javascript:void(0)">Completed<span class="pull-right">103</span></a>
                                 </div>
@@ -144,8 +144,8 @@
                                 <div class="col-md-12">
                                     <a class="btn btn-outline btn-danger d-flex justify-content-between" href="javascript:void(0)">Declined <span class="pull-right">19</span></a>
                                 </div>
-                                <div class="col-md-12">
-                                    <h2>Total Booking</h2>
+                                <div class="col-md-12 col-md-3">
+                                    <h3>Total Booking: <span>120</span></h3>
                                 </div>
 
                                 <label class="col-md-12 form-label pt-3">Ranking</label>
@@ -157,10 +157,6 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Change Ranking</button>
-                        <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
                 <!-- /.modal-content -->
