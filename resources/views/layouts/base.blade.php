@@ -56,6 +56,11 @@
                             <span>DASHBOARD</span>
                         </a>
                     </li>
+                    <li class="treeview">
+                        <a href="{{ route('users.index') }}">
+                            <span>BOOKINGS</span>
+                        </a>
+                    </li>
                     @therapist
                     <li class="treeview">
                         <a href="{{ route('galleries.index') }}">

@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->lgas();
         $this->call([
             UserSeeder::class,
-            MassageSeeder::class
+            MassageSeeder::class,
+            BookingSeeder::class,
         ]);
     }
 
