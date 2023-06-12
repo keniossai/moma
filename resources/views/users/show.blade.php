@@ -28,7 +28,7 @@
                                         <a href="" class="text-warning">View bookings</a>
                                     </div>
 
-                                    <h1 class="pro-price mb-0 mt-20">$270</h1>
+                                    <h5 class="pro-price mb-0 mt-20">Booking Completed: <span style="padding: 5px 10px; background-color: green; border-radius: 10px; color: white;" >0</span></h5>
                                     <hr/>
                                     <div class="form-element col-12">
                                         <label for="bio" class="form-label">Bio</label>
