@@ -183,18 +183,24 @@
                         <div class="timeline-point timeline-point-info">
                             <i class="fa fa-comment" aria-hidden="true"></i>
                         </div>
-                        <div class="timeline-event">
-                            <div class="timeline-heading">
-                                <h4 class="timeline-title"><a href="#">Jone Doe</a><small> commented on {{ $user->last_name }} profile</small></h4>
+                        @foreach($user->comments as $comment)
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title"><a href="#">{{ $comment->author->name }}</a><small> commented on {{ $user->last_name }} profile</small></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>{{ $comment->message }}</p>
+                                </div>
+                                <div class="timeline-footer">
+                                    <form action="" method="post" class="x-submit">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete Comment</button>
+                                    </form>
+                                    <p class="pull-right"><i class="fa fa-clock-o"></i> {{ $comment->created_at->diffForHumans() }}</p>
+                                </div>
                             </div>
-                            <div class="timeline-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
-                            </div>
-                            <div class="timeline-footer">
-                                <a class="btn btn-danger btn-sm" href="#">Delete Comment</a>
-                                <p class="pull-right"><i class="fa fa-clock-o"></i> 8 days ago</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
 
                 </div>
