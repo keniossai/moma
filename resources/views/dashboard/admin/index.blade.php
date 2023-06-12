@@ -68,7 +68,6 @@
 					  <div class="media-list media-list-divided media-list-hover">
 
                           @foreach($therapists as $therapist )
-                            {{-- {{ dd($therapist) }} --}}
                             <div class="media align-items-center">
                               <span class="badge badge-dot badge-danger"></span>
                               <a class="avatar avatar-lg status-success" href="#">
