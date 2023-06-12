@@ -7,21 +7,6 @@
                     <span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
                 </a>
             </li>
-            <li class="btn-group nav-item d-none d-xl-inline-block">
-                <a href="contact_app_chat.html" class="waves-effect waves-light nav-link svg-bt-icon" title="Chat">
-                    <i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
-                </a>
-            </li>
-            <li class="btn-group nav-item d-none d-xl-inline-block">
-                <a href="mailbox.html" class="waves-effect waves-light nav-link svg-bt-icon" title="Mailbox">
-                    <i class="icon-Mailbox"><span class="path1"></span><span class="path2"></span></i>
-                </a>
-            </li>
-            <li class="btn-group nav-item d-none d-xl-inline-block">
-                <a href="extra_taskboard.html" class="waves-effect waves-light nav-link svg-bt-icon" title="Taskboard">
-                    <i class="icon-Clipboard-check"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                </a>
-            </li>
         </ul>
     </div>
 
@@ -60,31 +45,6 @@
                                     <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li class="footer">
@@ -105,7 +65,6 @@
                 <ul class="dropdown-menu animated flipInX">
                     <li class="user-body">
                         <a class="dropdown-item" href="#"><i class="ti-user text-muted me-2"></i> Profile</a>
-                        <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i> My Wallet</a>
                         <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Settings</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#"
