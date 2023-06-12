@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Form;
 use App\Models\State;
 use App\Models\User;
 use App\Observers\UserObserver;
