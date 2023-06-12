@@ -192,7 +192,7 @@
                                     <p>{{ $comment->message }}</p>
                                 </div>
                                 <div class="timeline-footer">
-                                    <form action="" method="post" class="x-submit">
+                                    <form action="{{ route('api.comments.destroy', $comment) }}" method="post" class="x-submit" data-then="reload">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">Delete Comment</button>

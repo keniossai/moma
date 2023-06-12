@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CommentController;
 use App\Http\Controllers\Api\GalleryController;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\UserController;
@@ -28,6 +29,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::apiResource('users',             UserController::class);
     Route::apiResource('galleries',         GalleryController::class)->only(['store','update','destroy']);
+    Route::apiResource('comments',          CommentController::class)->only('store', 'update', 'destroy');
     Route::post('email/verify', VerifyEmailController::class)->name('verification.resend');
 });
 
