@@ -27,7 +27,7 @@
                                         </h2>
                                         <a href="" data-bs-toggle="modal" data-bs-target="#bookingModal" class="text-warning" style="padding: 8px 20px; border: 2px solid #fff; border-radius: 20px;">View bookings</a>
                                     </div>
-                                    <h5 class="pro-price mb-0 mt-20">Booking Completed: <span style="padding: 5px 10px; background-color: green; border-radius: 10px; color: white;" >0</span></h5>
+                                    <h5 class="pro-price mb-0 mt-20">Booking Completed: <span style="padding: 5px 10px; background-color: green; border-radius: 10px; color: white;" >{{ $user->completed_sessions }}</span></h5>
                                     <hr/>
                                     <div class="form-element col-12">
                                         <label for="bio" class="form-label">Bio</label>
@@ -138,14 +138,14 @@
                             <div class="form-group">
                                 <label class="form-label">Number of Completed</label>
                                 <div class="col-md-12 mb-2">
-                                    <a class="btn btn-outline btn-success d-flex justify-content-between" href="javascript:void(0)">Completed<span class="pull-right">103</span></a>
+                                    <a class="btn btn-outline btn-success d-flex justify-content-between" href="javascript:void(0)">Completed<span class="pull-right">{{ $user->completed_sessions }}</span></a>
                                 </div>
                                 <label class="col-md-12 form-label pt-2">Number of Declined</label>
                                 <div class="col-md-12">
-                                    <a class="btn btn-outline btn-danger d-flex justify-content-between" href="javascript:void(0)">Declined <span class="pull-right">19</span></a>
+                                    <a class="btn btn-outline btn-danger d-flex justify-content-between" href="javascript:void(0)">Declined <span class="pull-right">{{ $user->declined_sessions }}</span></a>
                                 </div>
                                 <div class="col-md-12 col-md-3">
-                                    <h3>Total Booking: <span>120</span></h3>
+                                    <h3>Total Booking: <span>{{ $user->sessions_count }}</span></h3>
                                 </div>
 
                                 <label class="col-md-12 form-label pt-3">Ranking</label>

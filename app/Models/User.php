@@ -85,6 +85,16 @@ class User extends Authenticatable
         return $this->hasMany(Gallery::class);
     }
 
+    public function bookings(): HasMany
+    {
+        return $this->hasMany(Booking::class);
+    }
+
+    public function sessions(): HasMany
+    {
+        return $this->hasMany(Booking::class, 'therapist_id');
+    }
+
     /**
      * @return Attribute
      */
