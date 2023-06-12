@@ -19,15 +19,14 @@
                                 <div class="col-md-8 col-sm-6">
                                     <div class="d-md-flex justify-content-between align-items-start">
                                         <h2 class="box-title mt-0 ">
-                                            <div>{{ $user->name }}</div>
+                                            <div>{{ $user->name }}</div><span>Popular  </span>
                                             <div class="fs-5 mt-3">
                                                 <span class="fw-light">Unique ID - </span>
                                                 <span>{{ $user->unique_id }}</span>
                                             </div>
                                         </h2>
-                                        <a href="" class="text-warning">View bookings</a>
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#bookingModal" class="text-warning" style="padding: 8px 20px; border: 2px solid #fff; border-radius: 20px;">View bookings</a>
                                     </div>
-
                                     <h5 class="pro-price mb-0 mt-20">Booking Completed: <span style="padding: 5px 10px; background-color: green; border-radius: 10px; color: white;" >0</span></h5>
                                     <hr/>
                                     <div class="form-element col-12">
@@ -127,5 +126,46 @@
             </div>
         </div>
 
+        <div id="bookingModal" class="modal center-modal fade-show in" tabindex="-1" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">All Booking</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="form-label">Numbe of Completed</label>
+                                <div class="col-md-12 mb-2">
+                                    <a class="btn btn-outline btn-success d-flex justify-content-between" href="javascript:void(0)">Completed<span class="pull-right">103</span></a>
+                                </div>
+                                <label class="col-md-12 form-label pt-2">Number of Declined</label>
+                                <div class="col-md-12">
+                                    <a class="btn btn-outline btn-danger d-flex justify-content-between" href="javascript:void(0)">Declined <span class="pull-right">19</span></a>
+                                </div>
+                                <div class="col-md-12">
+                                    <h2>Total Booking</h2>
+                                </div>
+
+                                <label class="col-md-12 form-label pt-3">Ranking</label>
+                                <div class="col-md-12">
+                                    <select class="form-control" name="ranking" id="ranking">
+                                        <option value="">Popular</option>
+                                        <option value="">VIP</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Change Ranking</button>
+                        <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
     </section>
 @endsection

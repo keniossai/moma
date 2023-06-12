@@ -41,6 +41,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/settings', function () {
         return view('settings.index');
     })->name('settings');
+    // Route::get('/users/booking', function(){
+    //     return view('users.booking');
+    // });
 //    Route::get('/gallery', function () {
 //        return view('gallery.index');
 //    })->name('gallery');
