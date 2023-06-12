@@ -134,7 +134,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="form-horizontal">
+                        <div class="form-horizontal">
                             <div class="form-group">
                                 <label class="form-label">Number of Completed</label>
                                 <div class="col-md-12 mb-2">
@@ -150,13 +150,21 @@
 
                                 <label class="col-md-12 form-label pt-3">Ranking</label>
                                 <div class="col-md-12">
-                                    <select class="form-control" name="ranking" id="ranking">
-                                        <option value="">Popular</option>
-                                        <option value="">VIP</option>
-                                    </select>
+                                    <form action="{{ route('api.users.update', $user) }}" class="x-submit" id="ranking-form" method="post"
+                                          data-confirm="true" data-then="reload"
+                                          data-swal-text="Do you want to change this therapist's ranking?"
+                                    >
+                                        @csrf
+                                        @method('PUT')
+                                        <select class="form-control" name="ranking" id="ranking" onchange="$('#ranking-form').submit()">
+                                            <option value="" @selected(is_null($user->ranking))>Normal</option>
+                                            <option value="popular" @selected($user->ranking == 'popular')>Popular</option>
+                                            <option value="vip" @selected($user->ranking == 'vip')>VIP</option>
+                                        </select>
+                                    </form>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
                 <!-- /.modal-content -->

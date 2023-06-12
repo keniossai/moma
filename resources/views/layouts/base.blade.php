@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ asset('admin') }}/css/skin_color.css">
 
     <script src="https://kit.fontawesome.com/1fe647256e.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     @stack('styles')
 </head>
 

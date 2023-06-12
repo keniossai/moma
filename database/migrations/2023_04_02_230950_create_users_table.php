@@ -31,6 +31,7 @@ return new class extends Migration
             $table->enum('location',[User::ABUJA, User::LAGOS, User::PH]);
             $table->boolean('active_status')->default(0);
             $table->string('avatar')->nullable();
+            $table->enum('ranking', ['popular', 'vip'])->nullable();
             $table->foreignId('state_id')->nullable()->constrained();
             $table->integer('login_count')->default(0);
             $table->timestamp('last_login')->nullable();
