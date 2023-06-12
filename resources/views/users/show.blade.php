@@ -19,7 +19,7 @@
                                 <div class="col-md-8 col-sm-6">
                                     <div class="d-md-flex justify-content-between align-items-start">
                                         <h2 class="box-title mt-0 ">
-                                            <div>{{ $user->name }}</div><span>Popular  </span>
+                                            <div>{{ $user->name }}</div>
                                             <div class="fs-5 mt-3">
                                                 <span class="fw-light">Unique ID - </span>
                                                 <span>{{ $user->unique_id }}</span>
@@ -166,6 +166,35 @@
                 <!-- /.modal-content -->
             </div>
             <!-- /.modal-dialog -->
+        </div>
+
+        <div class="box">
+            <div class="box-header">
+                <h4 class="box-title">Comments</h4>
+            </div>
+            <div class="box-body">
+                <div class="timeline timeline-single-column timeline-single-full-column">
+
+                    <div class="timeline-item">
+                        <div class="timeline-point timeline-point-info">
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title"><a href="#">Jone Doe</a><small> commented on {{ $user->last_name }} profile</small></h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
+                            </div>
+                            <div class="timeline-footer">
+                                <a class="btn btn-danger btn-sm" href="#">Delete Comment</a>
+                                <p class="pull-right"><i class="fa fa-clock-o"></i> 8 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </section>
 @endsection
