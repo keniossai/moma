@@ -8,13 +8,13 @@
                     <div class="box box-body">
                       <h6>
                         <span class="text-uppercase">Admin</span>
-                        <span class="float-end"><a class="btn btn-xs btn-primary-light" href="#">View</a></span>
+                        {{-- <span class="float-end"><a class="btn btn-xs btn-primary-light" href="#">View</a></span> --}}
                       </h6>
                       <br>
-                      <p class="fs-26">{{ $admin_count }}</p>
+                      <p class="fs-46">{{ $admin_count }}</p>
 
                       <div class="progress progress-xxs mt-0 mb-10">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       <div class="fs-12">Total number of admin</div>
                     </div>
@@ -25,13 +25,13 @@
                     <div class="box box-body">
                       <h6>
                         <span class="text-uppercase">Therapist</span>
-                        <span class="float-end"><a class="btn btn-xs btn-primary-light" href="#">View</a></span>
+                        {{-- <span class="float-end"><a class="btn btn-xs btn-primary-light" href="#">View</a></span> --}}
                       </h6>
                       <br>
-                      <p class="fs-26">{{ $therapist_count }}</p>
+                      <p class="fs-46">{{ $therapist_count }}</p>
 
                       <div class="progress progress-xxs mt-0 mb-10">
-                        <div class="progress-bar bg-purple" role="progressbar" style="width: 55%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-purple" role="progressbar" style="width: 20%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       <div class="fs-12">Total number of Therapist</div>
                     </div>
@@ -43,10 +43,10 @@
                         <span class="text-uppercase">Clients</span>
                       </h6>
                       <br>
-                      <p class="fs-26">{{ $client_count }}</p>
+                      <p class="fs-46">{{ $client_count }}</p>
 
                       <div class="progress progress-xxs mt-0 mb-10">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 52%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       <div class="flexbox fs-12">
                         <span>Total amount of client visited</span>
