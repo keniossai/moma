@@ -49,7 +49,7 @@
                 <ul class="fxt-socials">
                     <li class="fxt-google">
                         <div class="fxt-transformY-50 fxt-transition-delay-6">
-                            <a href="#" title="google"><i class="fab fa-google-plus-g"></i><span>Google +</span></a>
+                            <a href="{{ route('google-auth') }}" title="google"><i class="fab fa-google-plus-g"></i><span>Google +</span></a>
                         </div>
                     </li>
                     <li class="fxt-twitter">
