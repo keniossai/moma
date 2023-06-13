@@ -65,6 +65,47 @@
                 </div>
                 <div class="col-lg-12 col-md-9">
                     <div class="box">
+                        <div class="box-header with-border">
+                          <h4 class="box-title">Booking List</h4>
+                          <div class="box-controls pull-right">
+                            <div class="lookup lookup-circle lookup-right">
+                              <input type="text" name="s">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body no-padding">
+                            <div class="table-responsive">
+                              <table class="table table-hover">
+                                <tbody><tr>
+                                  <th>Client Name</th>
+                                  <th>Therapist</th>
+                                  <th></th>
+                                  <th>Date/Time</th>
+                                  <th>Status</th>
+                                  <th>Phone</th>
+                                  <th>Address</th>
+                                </tr>
+                                @foreach ($bookings as $booking)
+                                    <tr>
+                                        <td><a href="{{ route('users.show', $booking) }}"><h5>{{ $booking->client->name }}</h5></a></td>
+                                        <td><h6>{{ $booking->therapist->name }}</h6></td>
+                                        <td><h3>{{ $booking->users }}</h3></td>
+                                        <td><span class="text-muted"><i class="fa fa-clock-o"></i> {{ $booking->time }}</span> </td>
+                                        {{-- <td></td> --}}
+                                        {{-- <td>$158.00</td> --}}
+                                        <td><span class="badge badge-pill badge-danger">{{ $booking->status }}</span></td>
+                                        <td>{{ $booking->phone }}</td>
+                                        <td>{{ $booking->address }}</td>
+                                    </tr>
+                                @endforeach
+
+                              </tbody></table>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                      </div>
+                    <div class="box">
                         <div class="media-list media-list-divided media-list-hover">
 
                             @foreach($bookings as $booking)
@@ -166,3 +207,5 @@
         </section>
     </div>
 @endsection
+
+
