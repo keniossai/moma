@@ -86,26 +86,44 @@
                                   <th>Phone</th>
                                   <th>Address</th>
                                 </tr>
+                                @admin
+                                    @foreach ($bookings as $booking)
+                                        <tr>
+                                            <td><a href="{{ route('users.show', $booking) }}"><h5>{{ $booking->client->name }}</h5></a></td>
+                                            <td><h6>{{ $booking->therapist->name }}</h6></td>
+                                            <td><h3>{{ $booking->users }}</h3></td>
+                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> {{ $booking->time }}</span> </td>
+                                            <td><span class="badge badge-pill badge-danger">{{ $booking->status }}</span></td>
+                                            <td>{{ $booking->phone }}</td>
+                                            <td>{{ $booking->address }}</td>
+                                        </tr>
+                                    @endforeach
+                                @endadmin
+                                @therapist
+
                                 @foreach ($bookings as $booking)
                                     <tr>
                                         <td><a href="{{ route('users.show', $booking) }}"><h5>{{ $booking->client->name }}</h5></a></td>
-                                        <td><h6>{{ $booking->therapist->name }}</h6></td>
+                                            <td><h6>{{ $booking->therapist->name }}</h6></td>
                                         <td><h3>{{ $booking->users }}</h3></td>
                                         <td><span class="text-muted"><i class="fa fa-clock-o"></i> {{ $booking->time }}</span> </td>
                                         {{-- <td></td> --}}
                                         {{-- <td>$158.00</td> --}}
-                                        <td><span class="badge badge-pill badge-danger">{{ $booking->status }}</span></td>
+                                        <td><span class="badge badge-pill badge-success">{{ $booking->status }}</span></td>
                                         <td>{{ $booking->phone }}</td>
                                         <td>{{ $booking->address }}</td>
                                     </tr>
                                 @endforeach
+
+                                @endtherapist
+
 
                               </tbody></table>
                             </div>
                         </div>
                         <!-- /.box-body -->
                       </div>
-                    
+
                 </div>
 
             </div>
