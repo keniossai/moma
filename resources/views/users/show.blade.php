@@ -150,13 +150,13 @@
 
                                 <label class="col-md-12 form-label pt-3">Ranking</label>
                                 <div class="col-md-12">
-                                    <form action="{{ route('api.users.update', $user) }}" class="x-submit" id="ranking-form" method="post"
+                                    <form action="{{ route('api.users.update', $user) }}" class="x-submit" method="post"
                                           data-confirm="true" data-then="reload"
                                           data-swal-text="Do you want to change this therapist's ranking?"
                                     >
                                         @csrf
                                         @method('PUT')
-                                        <select class="form-control" name="ranking" id="ranking" onchange="$('#ranking-form').submit()">
+                                        <select class="form-control" name="ranking" id="ranking" onchange="$(this).parents('form').submit()">
                                             <option value="" @selected(is_null($user->ranking))>Normal</option>
                                             <option value="popular" @selected($user->ranking == 'popular')>Popular</option>
                                             <option value="vip" @selected($user->ranking == 'vip')>VIP</option>
